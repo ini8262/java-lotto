@@ -7,13 +7,19 @@ import lotto.ui.input.GameInput;
 import lotto.ui.input.Input;
 import lotto.ui.input.info.OmrCardInfo;
 import lotto.ui.input.info.RoundInfo;
+import lotto.ui.message.Message;
 import lotto.ui.output.GameOutput;
 import lotto.ui.output.Output;
 import lotto.ui.output.report.GameReport;
 
 public class Program {
+    public static final Message MESSAGE;
     private Output output;
     private Input input;
+
+    static {
+        MESSAGE = new Message("message/message_ko.properties");
+    }
 
     public Program() {
         this.output = new GameOutput(System.out);

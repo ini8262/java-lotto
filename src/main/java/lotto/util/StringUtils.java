@@ -2,6 +2,7 @@ package lotto.util;
 
 import java.text.DecimalFormat;
 import java.util.Arrays;
+import java.util.regex.Pattern;
 
 public class StringUtils {
     private static final String DEFAULT_REGEX = "\\s*,\\s*";

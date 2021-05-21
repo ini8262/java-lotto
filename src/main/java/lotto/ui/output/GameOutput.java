@@ -1,5 +1,7 @@
 package lotto.ui.output;
 
+import lotto.ui.Program;
+
 import java.io.OutputStream;
 import java.io.PrintStream;
 
@@ -17,6 +19,6 @@ public class GameOutput implements Output {
 
     @Override
     public void error(String text) {
-        out.print(String.format("[부적합한 입력값] %s\n", text));
+        out.println(Program.MESSAGE.get("response.error", text));
     }
 }
