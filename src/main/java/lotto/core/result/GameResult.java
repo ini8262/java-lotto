@@ -1,4 +1,4 @@
-package lotto.ui.output.result;
+package lotto.core.result;
 
 import lotto.core.omr.Omr;
 import lotto.core.omr.OmrCard;

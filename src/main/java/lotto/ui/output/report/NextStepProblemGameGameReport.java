@@ -1,7 +1,7 @@
 package lotto.ui.output.report;
 
 import lotto.core.round.Rank;
-import lotto.ui.output.result.GameResult;
+import lotto.core.result.GameResult;
 import java.util.Arrays;
 import java.util.function.Function;
 import java.util.stream.Collectors;

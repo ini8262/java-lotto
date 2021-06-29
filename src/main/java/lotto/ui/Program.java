@@ -10,7 +10,7 @@ import lotto.ui.output.GameOutput;
 import lotto.ui.output.Output;
 import lotto.ui.output.report.GameReport;
 import lotto.ui.output.report.NextStepProblemGameGameReport;
-import lotto.ui.output.result.GameResult;
+import lotto.core.result.GameResult;
 
 public class Program {
     private final Output output;
