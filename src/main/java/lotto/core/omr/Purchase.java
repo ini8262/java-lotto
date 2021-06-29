@@ -41,7 +41,7 @@ public class Purchase {
         return omrCard;
     }
 
-    public OmrCard exchange(final List<int[]> manualSixBalls) {
+    public OmrCard exchange(final List<List<Integer>> manualSixBalls) {
         if (manualCount == 0) {
             return exchange();
         }
@@ -50,7 +50,9 @@ public class Purchase {
 
         //maanual
         for (int i = 0; i < manualCount; i++) {
-            SixBall sixBall = SixBall.valueOf(manualSixBalls.get(i));
+            int[] fiexedBalls = manualSixBalls.get(i).stream().mapToInt(e -> e).toArray();
+
+            SixBall sixBall = SixBall.valueOf(fiexedBalls);
             omrCard.marking(sixBall);
         }
 

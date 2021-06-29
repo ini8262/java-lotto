@@ -29,20 +29,14 @@ public enum Rank {
     }
 
     public static Rank valueOf(int countOfMatch, boolean matchBonus) {
-        if (countOfMatch == FIFTH.countOfMatch) {
-            return FIFTH;
-        }
-        if (countOfMatch == FOURTH.countOfMatch) {
-            return FOURTH;
-        }
         if (countOfMatch == SECOND.countOfMatch) {
             return matchBonus ? SECOND : THIRD;
         }
-        if (countOfMatch == FIRST.countOfMatch) {
-            return FIRST;
-        }
 
-        return MISS;
+        return Arrays.stream(Rank.values())
+                .filter(r -> r.countOfMatch == countOfMatch)
+                .findFirst()
+                .orElse(MISS);
     }
 
     public int countOfMatch() {

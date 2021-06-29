@@ -11,7 +11,7 @@ import java.util.List;
 public class LottoPurchaseDTO {
     private int money;
     private int manualCount;
-    private List<int[]> manualSixBalls = new ArrayList<>();
+    private List<List<Integer>> manualSixBalls = new ArrayList<>();
 
     public void setMoney(final String money) {
         try {
@@ -31,7 +31,7 @@ public class LottoPurchaseDTO {
 
     public void appendManualSixBalls(final String csv) {
         try {
-            int[] numbers = StringUtils.csvToIntArray(csv);
+            List<Integer> numbers = StringUtils.csvToIntegerList(csv);
             this.manualSixBalls.add(numbers);
         } catch (Exception e) {
             throw new IllegalArgumentException("수동으로 구매할 로또 번호는 숫자만 가능합니다.");
